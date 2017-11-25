@@ -1,0 +1,24 @@
+#miniNotif {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    z-index: 50;
+}
+#miniNotif .miniNotif {
+	background-color : #f1f1f1;
+	padding: 10px 20px;
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#rgba(0, 0, 0, 0.1), Direction=180, Strength=2);
+		position: relative;
+		max-width: 220px;
+}
+#miniNotif .miniNotif > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+#miniNotif .miniNotif .icon:not(:empty) {
+	margin-right: 10px;
+}
