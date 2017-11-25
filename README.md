@@ -30,8 +30,16 @@ You can use rawgit links to keep updated your miniNotif :
 miniNotif.init();
 ```
 
-### 3. Ask a new notification:
+### 3. Diplay a new notification:
 
+The addNotif function handles theses parameters :
+
+|Rank|              | Required | Type    | Desc                                    |
+| - | ------------- |:--------:|-------- | --------------------------------------- |
+|0  | proccessOrNot | X        | Boolean | Hide immediatly the notif after if true |
+|1  | text          | X        | Object  | Contains your functions                 |
+|2  | icon          |          | HTML    | Text of the custoMenu item              |
+|3  | color         |          | String  | Description of the custoMenu item       |
 ```javascript
 miniNotif.addNotif(1, 'New notif !!!', '/!\\');
 ```
