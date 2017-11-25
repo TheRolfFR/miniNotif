@@ -12,12 +12,18 @@
 	-o-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#rgba(0, 0, 0, 0.1), Direction=180, Strength=2);
-		position: relative;
-		max-width: 220px;
+	position: relative;
+	max-width: 220px;
+	font-size: 18px;
 }
 #miniNotif .miniNotif > * {
 	display: inline-block;
 	vertical-align: middle;
+}
+#miniNotif .miniNotif .icon * {
+	max-height: 18px;
+	max-width: 18px;
+	float: left;
 }
 #miniNotif .miniNotif .icon:not(:empty) {
 	margin-right: 10px;
