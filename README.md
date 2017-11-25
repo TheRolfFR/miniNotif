@@ -20,8 +20,8 @@ Then custoMenu :
 ```
 You can use rawgit links to keep updated your miniNotif :
 ```html
-<script src="https://rawgit.com/TheRolfFR/custoMenu/master/miniNotif.js"></script>
-<link  href="https://rawgit.com/TheRolfFR/custoMenu/master/miniNotif.css" rel="stylesheet" />
+<script src="https://rawgit.com/TheRolfFR/miniNotif/master/miniNotif.js"></script>
+<link  href="https://rawgit.com/TheRolfFR/miniNotif/master/miniNotif.css" rel="stylesheet" />
 ```
 
 ### 2. Initalize miniNotif
