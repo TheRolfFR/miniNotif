@@ -10,8 +10,8 @@ var miniNotif = {
 	addNotif: function(proccessOrNot, text, icon = '', color ='') {
 		var fontcolor = 'black' || color; // default color is white
 		
-		var notif = '';
-		notif = $('<div class="miniNotif" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>').appendTo('body #miniNotif').css('opacity', '0').animate({ opacity: '1' }, 300).delay(500);
+		var notif = $('<div class="miniNotif" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>').appendTo('body #miniNotif');
+		notif.css('opacity', '0').animate({ opacity: '1' }, 300).delay(500);
 		console.log(notif);
 		//then i proccess my notif according to thee var
 		if(!proccessOrNot) {
