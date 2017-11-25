@@ -37,9 +37,9 @@ The addNotif function handles theses parameters :
 |Rank|              | Required | Type    | Desc                                    |
 | - | ------------- |:--------:|-------- | --------------------------------------- |
 |0  | proccessOrNot | X        | Boolean | Hide immediatly the notif after if true |
-|1  | text          | X        | Object  | Contains your functions                 |
-|2  | icon          |          | HTML    | Text of the custoMenu item              |
-|3  | color         |          | String  | Description of the custoMenu item       |
+|1  | text          | X        | String  | Text of the notification                |
+|2  | icon          |          | String  | Icon of the notification                |
+|3  | color         |          | String  | Text of the notification (hex/rgb/name) |
 ```javascript
 miniNotif.addNotif(1, 'New notif !!!', '/!\\');
 ```
