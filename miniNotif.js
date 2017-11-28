@@ -8,8 +8,8 @@ var miniNotif = {
 	},
 	
 	//add notif
-	addNotif: function(proccessOrNot, text, icon = '', color ='') {
-		var fontcolor = 'black' || color; // default color is white
+	addNotif: function(proccessOrNot, text, icon = '', fontcolor ='black') {
+		// default color is black
 		
 		$('body #miniNotif').append('<div class="miniNotif" id="' + this.i + '" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>');
 		
