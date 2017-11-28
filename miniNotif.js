@@ -15,7 +15,6 @@ var miniNotif = {
 		
 		var notif = $('#miniNotif .miniNotif#' + this.i);
 		notif.css('opacity', '0').animate({ opacity: '1' }, 300).delay(500);
-		console.log(notif);
 		this.i++;
 		//then i proccess my notif according to thee var
 		if(!proccessOrNot) {
