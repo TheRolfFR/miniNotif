@@ -23,6 +23,7 @@
 #miniNotif .miniNotif .icon * {
 	max-height: 18px;
 	max-width: 18px;
+	font-size: 18px;
 	float: left;
 }
 #miniNotif .miniNotif .icon:not(:empty) {
