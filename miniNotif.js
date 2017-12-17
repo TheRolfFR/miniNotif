@@ -14,7 +14,7 @@ var miniNotif = {
 		$('body #miniNotif').append('<div class="miniNotif" id="' + this.i + '" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>');
 		
 		var notif = $('#miniNotif .miniNotif#' + this.i);
-		notif.css('opacity', '0').animate({ opacity: '1' }, 300).delay(500);
+		notif.css('opacity', '0').animate({ opacity: '1' }, 300).delay(1000);
 		this.i++;
 		//then i proccess my notif according to thee var
 		if(!proccessOrNot) {
