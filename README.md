@@ -16,12 +16,12 @@ Import jQuery first :
 Then custoMenu :
 ```html
 <script src="path/to/miniNotif.js"></script>
-<link  href="path/to/miniNotif.css" rel="stylesheet" />
+<link href="path/to/miniNotif.css" rel="stylesheet" />
 ```
 You can use rawgit links to keep updated your miniNotif :
 ```html
 <script src="https://rawgit.com/TheRolfFR/miniNotif/master/miniNotif.js"></script>
-<link  href="https://rawgit.com/TheRolfFR/miniNotif/master/miniNotif.css" rel="stylesheet" />
+<link href="https://rawgit.com/TheRolfFR/miniNotif/master/miniNotif.css" rel="stylesheet" />
 ```
 
 ### 2. Initalize miniNotif
