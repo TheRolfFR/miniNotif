@@ -2,19 +2,27 @@ var miniNotif = {
 	i: 0,
 	//init
 	init: function(){
-    if(!$('#miniNotif').length) {
-        $('body').append('<div id="miniNotif"></div>');
-    }
+	    if(document.getElementById('mininotif') == undefined) {
+		document.body.innerHTML += '<div id="miniNotif"></div>';
+	    }
 	},
 	
 	//add notif
 	addNotif: function(proccessOrNot, text, icon = '', fontcolor ='black') {
 		// default color is black
 		
-		$('body #miniNotif').append('<div class="miniNotif" id="' + this.i + '" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>');
+		document.getElementById('mininotif').innerHTML += '<div class="miniNotif" id="' + this.i + '" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>';
 		
-		var notif = $('#miniNotif .miniNotif#' + this.i);
-		notif.css('opacity', '0').animate({ opacity: '1' }, 300).delay(1000);
+		var notif = document.querySelector('#miniNotif .miniNotif#' + this.i);
+		notif.style.opacity = 0;
+		
+		// animate notif
+		const animationTime = 300;
+		const interval = setInterval(function(){
+			notif.style.opacity += 10/animationTime;
+		}, 10);
+		setTimeout(function() { clearInterval(interval) }, 300);
+		
 		this.i++;
 		//then i proccess my notif according to thee var
 		if(!proccessOrNot) {
@@ -27,8 +35,19 @@ var miniNotif = {
 	
 	// proccess function
 	done: function(notif) {
-			notif.animate({
-					right: '-500px',
-			}, 300).delay(300).slideUp(300);
+		
+		const animationTime = 300;
+		let interval = setInterval(function(){
+			notif.style.right = parseInt(notif.style.right) - 5000/animationTime + 'px';
+		}, 10);
+		setTimeout(function() {
+			clearInterval(interval);
+			const initialHeight = notif.offsetHeight;
+			notif.style.height = initialHeight + 'px';
+			interval = setInterval(function(){
+				notif.style.height = parseInt(notif.style.height) - 10*initialHeight/animationTime;
+			}, 10);
+			setTimeout(function() { clearInterval(interval) }, 300);
+		}, 300);
 	}
 }
