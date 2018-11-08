@@ -17,37 +17,48 @@ var miniNotif = {
 		notif.style.opacity = 0;
 		
 		// animate notif
-		const animationTime = 300;
-		const interval = setInterval(function(){
-			notif.style.opacity += 10/animationTime;
-		}, 10);
-		setTimeout(function() { clearInterval(interval) }, 300);
+		notif.animate('opacity', 0, 1, 300);
 		
 		this.i++;
-		//then i proccess my notif according to thee var
-		if(!proccessOrNot) {
-			return notif;
-		} else {
-			// get out
-			miniNotif.done(notif);
-		}
+		setTimeout(function() {
+			//then i proccess my notif according to thee var
+			if(!proccessOrNot) {
+				return notif;
+			} else {
+				// get out
+				miniNotif.done(notif);
+			}
+		}, 500);
+		return null;
 	},
 	
 	// proccess function
 	done: function(notif) {
-		
-		const animationTime = 300;
-		let interval = setInterval(function(){
-			notif.style.right = parseInt(notif.style.right) - 5000/animationTime + 'px';
-		}, 10);
-		setTimeout(function() {
-			clearInterval(interval);
-			const initialHeight = notif.offsetHeight;
-			notif.style.height = initialHeight + 'px';
-			interval = setInterval(function(){
-				notif.style.height = parseInt(notif.style.height) - 10*initialHeight/animationTime;
-			}, 10);
-			setTimeout(function() { clearInterval(interval) }, 300);
-		}, 300);
+		notif.animate('right', '0px', '-500px', 300, function(){
+			notif.animate('height', notif.offsetHeight+'px', 0, 300);
+		});
 	}
+}
+
+// function to animate
+Element.prototype.animate = function(property, start, end, duration, callback = undefined) {
+	let that = this;
+	
+	const steps = duration/10;
+	const unit = start.toString().replace(/\d+/g, '') || end.toString().replace(/\d+/g, '');
+	const change = (parseFloat(end) - parseFloat(start))/steps;
+	
+	// animate
+	that.style[property] = start;
+	let time = 0;
+	let interval = setInterval(function(){
+		that.style[property] = parseFloat(that.style[property]) + change + unit;
+		time += 10;
+		if(time > duration) {
+			clearInterval(interval);
+			if(callback != undefined) {
+				callback(that);
+			}
+		}
+	}, 10);
 }
