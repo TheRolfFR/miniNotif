@@ -11,7 +11,7 @@ var miniNotif = {
 	addNotif: function(proccessOrNot, text, icon = '', fontcolor ='black') {
 		// default color is black
 		
-		document.getElementById('mininotif').innerHTML += '<div class="miniNotif" id="' + this.i + '" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>';
+		document.getElementById('miniNotif').innerHTML += '<div class="miniNotif" id="' + this.i + '" style="color: ' + fontcolor + '"><div class="icon">' + icon + '</div><div> ' + text + '</div></div>';
 		
 		var notif = document.querySelector('#miniNotif .miniNotif#' + this.i);
 		notif.style.opacity = 0;
