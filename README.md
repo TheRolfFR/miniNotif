@@ -18,10 +18,10 @@ Then custoMenu :
 <script src="path/to/miniNotif.js"></script>
 <link href="path/to/miniNotif.css" rel="stylesheet" />
 ```
-You can use rawgit links to keep updated your miniNotif :
+You can use jsdelivr links to keep updated your miniNotif :
 ```html
-<script src="https://rawgit.com/TheRolfFR/miniNotif/master/miniNotif.js"></script>
-<link href="https://rawgit.com/TheRolfFR/miniNotif/master/miniNotif.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/gh/TheRolfFR/miniNotif/miniNotif.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/TheRolfFR/miniNotif/miniNotif.css" rel="stylesheet" />
 ```
 
 ### 2. Initalize miniNotif
