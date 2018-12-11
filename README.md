@@ -1,5 +1,5 @@
 # miniNotif 
-![](https://img.shields.io/github/release-pre/therolffr/miniNotif.svg?style=flat-square)
+![](https://img.shields.io/github/release/therolffr/miniNotif.svg?style=flat-square)
 ![Drop, enjoy](https://img.shields.io/badge/Drop,-Enjoy%20!-red.svg?style=flat-square)
 [![Author](https://img.shields.io/badge/Author-TheRolfFR-%2331a589.svg?style=flat-square)](http://therolf.fr)
 ![License: LGPL--3.0](https://img.shields.io/badge/license-LGPL--3.0-lightgrey.svg?style=flat-square) 
@@ -39,8 +39,8 @@ The addNotif function handles theses parameters in an object :
 | text           | X        |               | String  | Text of the notification                 |
 | process        |          | true          | Boolean | Hide immediatly the notif after if true  |
 | icon           |          |               | String  | Icon of the notification                 |
-| color          |          | inherit       | String  | Color of the notification (CSS property) |
-| background     |          | inherit       | String  | background of the notification (CSS property) |
+| color          |          |               | String  | Color of the notification (CSS property) |
+| background     |          |               | String  | background of the notification (CSS property) |
 | fadeinduration |          | 300ms         | Number  | Duration in milliseconds of the fade in effect |
 | visibleduration   |          | 200ms         | Number  | Duration in milliseconds where it is visible |
 
