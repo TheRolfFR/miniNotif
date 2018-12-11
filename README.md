@@ -1,50 +1,59 @@
-# miniNotif
-[![Dependency jQuery](https://img.shields.io/badge/Dependency-jQuery-red.svg)](https://jquery.com/)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+# miniNotif 
+![](https://img.shields.io/github/release-pre/therolffr/miniNotif.svg?style=flat-square)
+![Drop, enjoy](https://img.shields.io/badge/Drop,-Enjoy%20!-red.svg?style=flat-square)
+[![Author](https://img.shields.io/badge/Author-TheRolfFR-%2331a589.svg?style=flat-square)](http://therolf.fr)
+![License: LGPL--3.0](https://img.shields.io/badge/license-LGPL--3.0-lightgrey.svg?style=flat-square) 
+![Repo Size](https://img.shields.io/github/languages/code-size/TheRolfFR/miniNotif.svg?style=flat-square)
+[![jsDelivr Hits](https://data.jsdelivr.com/v1/package/gh/TheRolfFR/miniNotif/badge?style=flat-square)](https://www.jsdelivr.com/package/gh/TheRolfFR/miniNotif)
 
 Display custom notifications easily
 
 ## Usage
 
 ### 1. Import js and css
-
-Import jQuery first :
-```html
-<script src='path/to/jquery.min.js'></script>
-```
-Then custoMenu :
 ```html
 <script src="path/to/miniNotif.js"></script>
 <link href="path/to/miniNotif.css" rel="stylesheet" />
 ```
-You can use jsdelivr links to keep updated your miniNotif :
-```html
-<script src="https://cdn.jsdelivr.net/gh/TheRolfFR/miniNotif/miniNotif.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/TheRolfFR/miniNotif/miniNotif.css" rel="stylesheet" />
-```
+You can use jsDelivr links to keep updated your miniNotif : https://www.jsdelivr.com/package/gh/TheRolfFR/miniNotif 
 
-### 2. Initalize miniNotif
+### 2. Initalize miniNotif in your javascript
 
 ```javascript
 miniNotif.init();
 ```
 
+You can initialize with a parameter, the name of the selector where you want your notifications to pop in or the object himself :
+```javascript
+miniNotif.init('#element');
+// or
+miniNotif.init(document.getElementById('element'));
+```
+
 ### 3. Diplay a new notification:
 
-The addNotif function handles theses parameters :
+The addNotif function handles theses parameters in an object :
 
-|Rank|              | Required | Type    | Desc                                     |
-| - | ------------- |:--------:|-------- | ---------------------------------------- |
-|0  | proccessOrNot | X        | Boolean | Hide immediatly the notif after if true  |
-|1  | text          | X        | String  | Text of the notification                 |
-|2  | icon          |          | String  | Icon of the notification                 |
-|3  | color         |          | String  | Color of the notification (hex/rgb/name) |
+| Parameter name | Required | Default value | Type    | Description                              |
+| -------------  |:--------:| ------------- | ------- | ---------------------------------------- |
+| text           | X        |               | String  | Text of the notification                 |
+| process        |          | true          | Boolean | Hide immediatly the notif after if true  |
+| icon           |          |               | String  | Icon of the notification                 |
+| color          |          | inherit       | String  | Color of the notification (CSS property) |
+| background     |          | inherit       | String  | background of the notification (CSS property) |
+| fadeinduration |          | 300ms         | Number  | Duration in milliseconds of the fade in effect |
+| visibleduration   |          | 200ms         | Number  | Duration in milliseconds where it is visible |
+
+Example : 
 ```javascript
-miniNotif.addNotif(1, 'New notif !!!', '/!\\');
+miniNotif.addNotif({
+    text: 'New notification !!!',
+    icon: '(!)',
+    color: 'white',
+    background: 'linear-gradient(135deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);',
+    fadeinduration: 250,
+    visibleduration: 1000
+});
 ```
 
 ### 4. Enjoy !
-
-
-License: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY 4.0 International</a>
