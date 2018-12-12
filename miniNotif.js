@@ -42,8 +42,10 @@ let miniNotif = {
 		}
 
 		// add the notif
-		this.miniNotifElement.appendHTML('<div class="miniNotif" id="mn' + this.i + '" style="color: ' + options.color + '; background: ' + options.background + '"><div><span class="icon">' + options.icon + '</span>' + options.text + '</div></div>');
+		this.miniNotifElement.appendHTML('<div class="miniNotif" id="mn' + this.i + '"><div><span class="icon">' + options.icon + '</span>' + options.text + '</div></div>');
 		let notif = this.miniNotifElement.lastElementChild;
+		notif.style.color = options.color || notif.style.color;
+		notif.style.background = options.background || notif.style.background;
 		
 		// animate the notif
 		notif.animate('opacity', 0, 1, options.fadeinduration + 'ms');
