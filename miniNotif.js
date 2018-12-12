@@ -41,8 +41,6 @@ let miniNotif = {
 			options[key] = parameters[key];
 		}
 
-		console.log(options);
-
 		// add the notif
 		this.miniNotifElement.appendHTML('<div class="miniNotif" id="mn' + this.i + '" style="color: ' + options.color + '; background: ' + options.background + '"><div><span class="icon">' + options.icon + '</span>' + options.text + '</div></div>');
 		let notif = this.miniNotifElement.lastElementChild;
@@ -51,16 +49,14 @@ let miniNotif = {
 		notif.animate('opacity', 0, 1, options.fadeinduration + 'ms');
 		
 		this.i++;
-		setTimeout(function() {
-			//then i proccess my notif according to the proccessOrNot parameter
-			if(!options.process) {
-				return notif;
-			} else {
-				// get out
+		if(options.process) {
+			setTimeout(function() {
+				// process notification after delay
 				miniNotif.done(notif);
-			}
-		}, options.fadeinduration +options.visibleduration);
-		return null;
+			}, options.fadeinduration +options.visibleduration);
+		} else {
+			return notif;
+		}
 	},
 	
 	// proccess function

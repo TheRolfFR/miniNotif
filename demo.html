@@ -12,7 +12,7 @@
         miniNotif.init();
         document.getElementsByTagName("form")[0].addEventListener("submit", function(evt){
             evt.preventDefault();
-            miniNotif.addNotif({
+            console.log(miniNotif.addNotif({
                 process: document.getElementById('persistent').checked,
                 text: document.getElementById('text').value,
                 icon: document.getElementById('icon').value,
@@ -20,7 +20,7 @@
                 color: document.getElementById('color').value,
                 fadeinduration: parseInt(document.getElementById('fadeinduration').value),
                 visibleduration: parseInt(document.getElementById('visibleduration').value)
-            });
+            }));
         });
     });
     </script>

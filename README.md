@@ -1,7 +1,7 @@
 # miniNotif 
 ![](https://img.shields.io/github/release/therolffr/miniNotif.svg?style=flat-square)
 ![Drop, enjoy](https://img.shields.io/badge/Drop,-Enjoy%20!-red.svg?style=flat-square)
-[![Author](https://img.shields.io/badge/Author-TheRolfFR-%2331a589.svg?style=flat-square)](http://therolf.fr)
+[![Author](https://img.shields.io/badge/Author-TheRolfFR-%2331a589.svg?style=flat-square)](http://bit.ly/therolf-website)
 ![License: LGPL--3.0](https://img.shields.io/badge/license-LGPL--3.0-lightgrey.svg?style=flat-square) 
 ![Repo Size](https://img.shields.io/github/languages/code-size/TheRolfFR/miniNotif.svg?style=flat-square)
 [![jsDelivr Hits](https://data.jsdelivr.com/v1/package/gh/TheRolfFR/miniNotif/badge?style=flat-square)](https://www.jsdelivr.com/package/gh/TheRolfFR/miniNotif)
